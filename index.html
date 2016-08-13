@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>원두콩</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/lightbox.css" rel="stylesheet">
+    <link href="assets/css/icon_style.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Icons Font -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Preloader
+	============================================= -->
+    <div class="preloader"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+    <!-- Header
+	============================================= -->
+    <section class="main-header">
+
+       <div class="main_nav">
+           <h1 class="main_logo">
+             <a href="#" title="wanducong" class="sprite logo_link"></a>
+           </h1>
+       <!-- 로그인 / 회원 가입 / 회원 정보 부분 -->
+           <div class="main_menu">
+             <a href="#" class="login_link">로그인</a>
+           </div>
+         </div>
+
+        <div id="owl-hero" class="owl-carousel owl-theme">
+            <div class="item" style="background-image: url(assets/img/sliders/banner1.png)">
+                <div class="caption">
+                    <h6>여자 / 로맨틱 / 성공적</h6>
+                    <h1>홍대 요즘 핫한<br> 스터디 카페</h1>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/img/sliders/banner2.png)">
+                <div class="caption">
+                    <h6>트렌드세터는 혜화를 가야지</h6>
+                    <h1>혜화 집중 잘되는<br>조용한 카페</h1>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/img/sliders/banner1.png)">
+                <div class="caption">
+                    <h6>어디 갈 건대?</h6>
+                    <h1>건대 뜨고 있는<br> 신생 카페</h1>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="search">
+        <div class="container">
+            <div class="menu-search col-md-12">
+             <form role="search" class="search-form" action="#" method="get">
+              <input class="search-field col-md-12" type="text" name="s" id="s" placeholder="카페 검색하기" required>
+              <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+    </section>
+
+    <div class="filter-item">
+        <div class="container">
+            <div class="filter-title">필터로 검색하기</div>
+            <p class="cafe-wrap">
+                <input type="checkbox" id="loca01" name="loca" class="loca"/>
+                <label for="loca01" class="loca">
+                    홍대입구/합정
+                </label>
+                <input type="checkbox" id="loca02" name="loca" class="loca"/>
+                <label for="loca02" class="loca">
+                    신촌
+                </label>
+                <input type="checkbox" id="loca03" name="loca" class="loca"/>
+                <label for="loca03" class="loca">
+                    상수
+                </label>
+                <input type="checkbox" id="loca04" name="loca" class="loca"/>
+                <label for="loca04" class="loca">
+                    건대입구
+                </label>
+                <input type="checkbox" id="loca05" name="loca" class="loca"/>
+                <label for="loca05" class="loca">
+                    성신여대/혜화
+                </label>
+                <input type="checkbox" id="loca06" name="loca" class="loca"/>
+                <label for="loca06" class="loca">
+                    교대
+                </label>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+    <hr>
+    </div>
+
+    <div class="filter-item">
+        <div class="container">
+            <p class="cafe-wrap">
+                <input type="checkbox" id="food01" name="food" class="food"/>
+                <label for="food01" class="sprite food01"></label>
+                <input type="checkbox" id="food02" name="food" class="food"/>
+                <label for="food02" class="sprite food02"></label>
+                <input type="checkbox" id="food03" name="food" class="food"/>
+                <label for="food03" class="sprite food03"></label>
+                <input type="checkbox" id="food04" name="food" class="food"/>
+                <label for="food04" class="sprite food04"></label>
+                <input type="checkbox" id="food05" name="food" class="food"/>
+                <label for="food05" class="sprite food05"></label>
+            </p>
+        </div>
+    </div>
+    <div class="btn-section">
+        <div class="container">
+            <button type="submit" onclick="common_ga('PU_DWN_FILTER', 'CLICK_FILTER_APPLY')" value="" ng-click="do_filter_search()" class="btn-custom">적용</button>
+        </div>
+    </div>
+    <!-- 카페리스트
+	============================================= -->
+<!--
+    -->
+    <section id="cafe-list">
+        <div class="container">
+            <ul class="grid-4">
+                <li class="grid col-md-3">
+                    <a href="cafe-romont.html" class="cafe-box">
+                        <div class="box">
+                            <img src="assets/img/cafe/cafe01.png">
+                        </div>
+                        <div class="inner">
+                            <span class="cafe-title">카페 로몽</span>
+                            <br>
+                            <span class="cafe-info">조용하고 한적한 카페</span>
+                        </div>
+                    </a>
+                    <a href="/" class="sprite scrap">
+                    </a>
+                </li>
+                <li class="grid col-md-3">
+                    <a href="#" class="cafe-box">
+                        <div class="box">
+                            <img src="assets/img/cafe/cafe02.png">
+                        </div>
+                        <div class="inner">
+                            <span class="cafe-title">카페K375</span>
+                            <br>
+                            <span class="cafe-info">분위기 좋고 조용한 카페</span>
+                        </div>
+                    </a>
+                    <a href="/" class="sprite scrap">
+                    </a>
+                </li>
+                <li class="grid col-md-3">
+                    <a href="#" class="cafe-box">
+                        <div class="box">
+                            <img src="assets/img/cafe/cafe03.png">
+                        </div>
+                        <div class="inner">
+                            <span class="cafe-title">카페K375</span>
+                            <br>
+                            <span class="cafe-info">분위기 좋고 조용한 카페</span>
+                        </div>
+                    </a>
+                    <a href="/" class="sprite scrap">
+                    </a>
+                </li>
+                <li class="grid col-md-3">
+                    <a href="#" class="cafe-box">
+                        <div class="box">
+                            <img src="assets/img/cafe/cafe04.png">
+                        </div>
+                        <div class="inner">
+                            <span class="cafe-title">카페K375</span>
+                            <br>
+                            <span class="cafe-info">분위기 좋고 조용한 카페</span>
+                        </div>
+                    </a>
+                    <a href="/" class="sprite scrap">
+                    </a>
+                </li>
+                <li class="grid col-md-3">
+                    <a href="#" class="cafe-box">
+                        <div class="box">
+                            <img src="assets/img/cafe/cafe05.png">
+                        </div>
+                        <div class="inner">
+                            <span class="cafe-title">카페K375</span>
+                            <br>
+                            <span class="cafe-info">분위기 좋고 조용한 카페</span>
+                        </div>
+                    </a>
+                    <a href="/" class="sprite scrap">
+                    </a>
+                </li>
+                <li class="grid col-md-3">
+                    <a href="#" class="cafe-box">
+                        <div class="box">
+                            <img src="assets/img/cafe/cafe06.png">
+                        </div>
+                        <div class="inner">
+                            <span class="cafe-title">카페K375</span>
+                            <br>
+                            <span class="cafe-info">분위기 좋고 조용한 카페</span>
+                        </div>
+                    </a>
+                    <a href="/" class="sprite scrap">
+                    </a>
+                </li>
+                <li class="grid col-md-3">
+                    <a href="#" class="cafe-box">
+                        <div class="box">
+                            <img src="assets/img/cafe/cafe07.png">
+                        </div>
+                        <div class="inner">
+                            <span class="cafe-title">카페K375</span>
+                            <br>
+                            <span class="cafe-info">분위기 좋고 조용한 카페</span>
+                        </div>
+                    </a>
+                    <a href="/" class="sprite scrap">
+                    </a>
+                </li>
+                <li class="grid col-md-3">
+                    <a href="#" class="cafe-box">
+                        <div class="box">
+                            <img src="assets/img/cafe/cafe08.png">
+                        </div>
+                        <div class="inner">
+                            <span class="cafe-title">카페K375</span>
+                            <br>
+                            <span class="cafe-info">분위기 좋고 조용한 카페</span>
+                        </div>
+                    </a>
+                    <a href="/" class="sprite scrap">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="more-btn">
+            <div class="container">
+                <a href="/" class="more-click">
+                    더보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio
+   ============================================= -->
+    <section id="portfolio">
+        <div class="container-fluid">
+            <h2>지역별 인기 카페</h2>
+            <hr class="sep">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a class="portfolio-box" href="assets/img/portfolio/1.jpg" data-lightbox="image-1" data-title="Your caption">
+                        <img src="assets/img/portfolio/1.jpg" class="img-responsive" alt="1">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    홍대/합정
+                                </div>
+                                <div class ="project-name">
+                                    홍대 안가니 홍홍홍
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a href="assets/img/portfolio/2.jpg" class="portfolio-box" data-lightbox="image-2" data-title="Your caption">
+                        <img src="assets/img/portfolio/2.jpg" class="img-responsive" alt="2">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    혜화
+                                </div>
+                               <div class ="project-name">
+                                    내가 바로 트렌드세터!
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a href="assets/img/portfolio/3.jpg" class="portfolio-box" data-lightbox="image-3" data-title="Your caption">
+                        <img src="assets/img/portfolio/3.jpg" class="img-responsive" alt="3">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    건대/성수
+                                </div>
+                                <div class ="project-name">
+                                    어디로 가실 건대?
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a href="assets/img/portfolio/4.jpg" class="portfolio-box" data-lightbox="image-4" data-title="Your caption">
+                        <img src="assets/img/portfolio/4.jpg" class="img-responsive" alt="4">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    교대
+                                </div>
+                                <div class ="project-name">
+                                    야 나랑 교대 좀 해주라..
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a href="assets/img/portfolio/5.jpg" class="portfolio-box" data-lightbox="image-5" data-title="Your caption">
+                        <img src="assets/img/portfolio/5.jpg" class="img-responsive" alt="5">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    성신여대
+                                </div>
+                                <div class ="project-name">
+                                    성실한 아이는 성신으로
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a href="assets/img/portfolio/6.jpg" class="portfolio-box" data-lightbox="image-6" data-title="Your caption">
+                        <img src="assets/img/portfolio/6.jpg" class="img-responsive" alt="6">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    신촌
+                                </div>
+                                <div class ="project-name">
+                                    신촌이 어디니?
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Work Process
+   ============================================= -->
+<!--
+    <section id="work-process">
+        <div class="container">
+            <h2>Work Process</h2>
+            <hr class="sep">
+            <p>What Happen In The Background</p>
+            <div class="row wow fadeInUp" data-wow-delay=".3s">
+                <div class="col-lg-3">
+                    <span class="icon-chat"></span>
+                    <h4>1.Discuss</h4>
+                </div>
+                <div class="col-lg-3">
+                    <span class="icon-circle-compass"></span>
+                    <h4>2.Sketch</h4>
+                </div>
+                <div class="col-lg-3">
+                    <span class="icon-browser"></span>
+                    <h4>3.Make</h4>
+                </div>
+                <div class="col-lg-3">
+                    <span class="icon-global"></span>
+                    <h4>4.Publish</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Some Fune Facts
+	============================================= -->
+<!--
+    <section id="fun-facts">
+        <div class="container">
+            <h2>Some Fun Facts </h2>
+            <hr class="light-sep">
+            <p>Fun Facts</p>
+            <div class="row wow fadeInUp" data-wow-delay=".3s">
+                <div class="col-lg-3">
+                    <span class="icon-happy"></span>
+                    <h2 class="number timer">367</h2>
+                    <h4>Happy Clients</h4>
+                </div>
+                <div class="col-lg-3">
+                    <span class="icon-trophy"></span>
+                    <h2 class="number timer">150</h2>
+                    <h4>Project Done</h4>
+                </div>
+                <div class="col-lg-3">
+                    <span class="icon-wine"></span>
+                    <h2 class="number timer">121</h2>
+                    <h4>Glass Of Wine</h4>
+                </div>
+                <div class="col-lg-3">
+                    <span class="icon-documents"></span>
+                    <h2 class="number timer">10000</h2>
+                    <h4>Lines Of Code</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Some Fune Facts
+	============================================= -->
+<!--
+    <section id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <hr class="sep">
+            <p>Designers Behind This Work</p>
+            <div class="row wow fadeInUp" data-wow-delay=".3s">
+                <div class="col-md-4">
+                    <div class="team">
+                        <img class="img-responsive center-block" src="assets/img/team/MariaDoe.jpg" alt="1">
+                        <h4>Maria Doe</h4>
+                        <p>Designer</p>
+                        <div class="team-social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team">
+                        <img class="img-responsive center-block" src="assets/img/team/JasonDoe.jpg" alt="2">
+                        <h4>Jason Doe</h4>
+                        <p>Developer</p>
+                        <div class="team-social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team">
+                        <img class="img-responsive center-block" src="assets/img/team/MikeDoe.jpg" alt="3">
+                        <h4>Mike Doe</h4>
+                        <p>Photographer</p>
+                        <div class="team-social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Testimonials
+	============================================= -->
+<!--
+    <section id="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <hr class="light-sep">
+            <p>What Clients Say About Us</p>
+            <div id="owl-testi" class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="quote">
+                        <i class="fa fa-quote-left left fa-2x"></i>
+                        <h5>I’am amazed, I should say thank you so much for your awesome template. Design is so
+good and neat, every detail has been taken care these team are realy amazing and talented! I will
+work only with <span>Rise</span>.<i class="fa fa-quote-right right fa-2x"></i></h5>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="quote">
+                        <i class="fa fa-quote-left left fa-2x"></i>
+                        <h5>I’am amazed, I should say thank you so much for your awesome template. Design is so
+good and neat, every detail has been taken care these team are realy amazing and talented! I will
+work only with <span>Rise</span>.<i class="fa fa-quote-right right fa-2x"></i></h5>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="quote">
+                        <i class="fa fa-quote-left left fa-2x"></i>
+                        <h5>I’am amazed, I should say thank you so much for your awesome template. Design is so
+good and neat, every detail has been taken care these team are realy amazing and talented! I will
+work only with <span>Rise</span>.<i class="fa fa-quote-right right fa-2x"></i></h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Contact Us
+	============================================= -->
+<!--
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <hr class="sep">
+            <p>Get In Touch</p>
+            <div class="col-md-6 col-md-offset-3 wow fadeInUp" data-wow-delay=".3s">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="Name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="Email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                    </div>
+                    <a href="#" class="btn-block">Send</a>
+                </form>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Google Map
+	============================================= -->
+<!--    <div id="map"></div>-->
+    <!-- Footer
+	============================================= -->
+    <div class="footer">
+        <div class="container">
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fa fa-dribbble fa-2x"></i></a>
+            </div>
+            <h6>&copy; 2016 Development By Wonducong Team</h6>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- JS PLUGINS -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!-- <script src="plugins/waypoints/jquery.waypoints.min.js"></script> -->
+    <script src="assets/js/jquery.countTo.js"></script>
+    <script src="assets/js/jquery.inview.min.js"></script>
+    <script src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <!-- GOOGLE MAP -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    angular.module('ui.bootstrap.demo').controller('DropdownCtrl', function ($scope, $log) {
+  $scope.items = [
+    'The first choice!',
+    'And another choice for you.',
+    'but wait! A third!'
+  ];
+
+  $scope.status = {
+    isopen: false
+  };
+
+  $scope.toggled = function(open) {
+    $log.log('Dropdown is now: ', open);
+  };
+
+  $scope.toggleDropdown = function($event) {
+    $event.preventDefault();
+    $event.stopPropagation();
+    $scope.status.isopen = !$scope.status.isopen;
+  };
+
+  $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
+});
+    </script>
+    <script type="text/ng-template" id="dropdown.html">
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="button-template-url">
+          <li role="menuitem"><a href="#">Action in Template</a></li>
+          <li role="menuitem"><a href="#">Another action in Template</a></li>
+          <li role="menuitem"><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li role="menuitem"><a href="#">Separated link in Template</a></li>
+        </ul>
+    </script>
+</body>
+
+</html>
